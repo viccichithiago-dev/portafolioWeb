@@ -1,0 +1,33 @@
+---
+import Section from './Section.astro';
+import { Icon } from 'astro-icon/components';
+
+const techStack = [
+  { name: 'Java', category: 'Language', icon: 'devicon:java' },
+  { name: 'Spring Boot', category: 'Framework', icon: 'devicon:spring' },
+  { name: 'Docker', category: 'DevOps', icon: 'devicon:docker' },
+  { name: 'Bash', category: 'Scripting', icon: 'devicon:bash' },
+  { name: 'PostgreSQL', category: 'Database', icon: 'devicon:postgresql' },
+  { name: 'Go', category: 'Language', icon: 'devicon:go' },
+  { name: 'Astro', category: 'Framework', icon: 'devicon:astro' },
+  { name: 'TypeScript', category: 'Language', icon: 'devicon:typescript' },
+];
+---
+
+<Section id="techstack">
+  <h2 class="text-2xl font-semibold text-[#111111] pb-4 border-b-2 border-[#c084fc] mb-8" style="letter-spacing: -0.02em;">Tech Stack</h2>
+  
+  <div class="grid gap-4 md:grid-cols-4">
+    {techStack.map((tech) => (
+      <div class="flex items-center gap-4 p-6 bg-[#f5f5f5] rounded-[12px] hover:shadow-md transition-shadow">
+        <div class="w-8 h-8 flex-shrink-0 flex items-center justify-center">
+          <Icon name={tech.icon} class="w-8 h-8" />
+        </div>
+        <div>
+          <p class="text-base font-semibold text-[#111111]">{tech.name}</p>
+          <p class="text-sm text-[#6b7280]">{tech.category}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</Section>
