@@ -1,23 +1,74 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+interface Props {
+  title: string;
+}
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+const { title } = Astro.props;
+
+// src/layouts/Layout.astro
+import '../styles/global.css'; // <--- ESTA LÍNEA ES CLAVE
+
+---
+
+<!doctype html>
+<html lang="es" style="scroll-behavior: smooth;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Thiago Viccichi - Backend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#ffffff] text-[#111111] font-['Inter',_system-ui,_-apple-system,_BlinkMacSystemFont,'Segoe_UI',_Roboto,_sans-serif]">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#ffffff] border-b border-[#e5e7eb]">
+      <div class="max-w-5xl mx-auto px-6 h-16 flex justify-between items-center">
+        <a href="/" class="text-lg font-semibold text-[#111111] hover:text-[#c084fc] transition-colors">
+          Thiago Viccichi
+        </a>
+        <div class="flex gap-6 text-sm font-medium">
+          <a href="#about" class="text-[#6b7280] hover:text-[#111111] transition-colors">Sobre mí</a>
+          <a href="#projects" class="text-[#6b7280] hover:text-[#111111] transition-colors">Proyectos</a>
+          <a href="#techstack" class="text-[#6b7280] hover:text-[#111111] transition-colors">Tech Stack</a>
+          <a href="#contact" class="text-[#6b7280] hover:text-[#111111] transition-colors">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-16">
+      <slot />
+    </main>
+
+    <footer class="bg-[#101010] text-[#a1a1aa] py-16">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <h3 class="text-white font-semibold mb-4">Thiago Viccichi</h3>
+            <p class="text-sm">Backend Developer especializado en Java y Spring Boot.</p>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold mb-4">Enlaces</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#about" class="hover:text-white transition-colors">Sobre mí</a></li>
+              <li><a href="#projects" class="hover:text-white transition-colors">Proyectos</a></li>
+              <li><a href="#techstack" class="hover:text-white transition-colors">Tech Stack</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold mb-4">Conectar</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="https://github.com/viccichithiago-dev" target="_blank" class="hover:text-white transition-colors">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/thiago-viccichi-6a7381231/" target="_blank" class="hover:text-white transition-colors">LinkedIn</a></li>
+              <li><a href="mailto:cathiagoviccichi@gmail.com" class="hover:text-white transition-colors">Email</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-[#1a1a1a] pt-8 text-center text-sm">
+          © 2026 Thiago Viccichi
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
