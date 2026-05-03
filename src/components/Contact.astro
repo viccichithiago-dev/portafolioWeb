@@ -18,21 +18,23 @@ const socialLinks = [
 ---
 
 <Section id="contact">
-  <div class="bg-[#f5f5f5] rounded-[12px] p-12 text-center">
-    <h2 class="text-2xl font-semibold text-[#111111] mb-4" style="letter-spacing: -0.02em;">¿Conectamos?</h2>
+  <div class="bg-[var(--bg-secondary)] rounded-[12px] p-12 text-center">
+    <h2 class="text-2xl font-semibold text-[var(--text-primary)] mb-4" style="letter-spacing: -0.02em;" data-i18="contact.title">
+      ¿Conectamos?
+    </h2>
     
-    <p class="text-base text-[#6b7280] mb-8 max-w-lg mx-auto">
+    <p class="text-base text-[var(--text-muted)] mb-8 max-w-lg mx-auto" data-i18="contact.description">
       ¿Tienes alguna pregunta o quieres conectar? No dudes en escribirme.
     </p>
     
     <a
       href={`mailto:${email}`}
-      class="inline-flex items-center gap-2 px-6 py-3 bg-[#111111] text-[#ffffff] rounded-[8px] text-sm font-semibold hover:bg-[#242424] transition-colors"
+      class="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent-dark)] text-white rounded-[8px] text-sm font-semibold hover:bg-[var(--accent-hover)] transition-colors"
     >
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
       </svg>
-      Enviar email
+      <span data-i18="contact.email">Enviar email</span>
     </a>
     
     <div class="flex justify-center gap-6 mt-8">
@@ -41,7 +43,7 @@ const socialLinks = [
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-[#6b7280] hover:text-[#111111] transition-colors"
+          class="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
           aria-label={link.name}
         >
           <Fragment set:html={link.svg} />
@@ -50,3 +52,17 @@ const socialLinks = [
     </div>
   </div>
 </Section>
+
+<script>
+  window.addEventListener('translations-ready', (e: Event) => {
+    const { t } = (e as CustomEvent).detail;
+    
+    const titleEl = document.querySelector('[data-i18="contact.title"]');
+    const descEl = document.querySelector('[data-i18="contact.description"]');
+    const emailEl = document.querySelector('[data-i18="contact.email"]');
+    
+    if (titleEl) titleEl.textContent = t.contact.title;
+    if (descEl) descEl.textContent = t.contact.description;
+    if (emailEl) emailEl.textContent = t.contact.email;
+  });
+</script>
