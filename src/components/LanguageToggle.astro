@@ -1,0 +1,35 @@
+---
+---
+<button
+  id="lang-toggle"
+  class="px-3 py-1.5 text-sm font-medium rounded-lg hover:bg-[var(--bg-secondary)] transition-colors border border-[var(--border-color)]"
+  aria-label="Cambiar idioma"
+>
+  EN
+</button>
+
+<script>
+  const toggle = document.getElementById('lang-toggle');
+  const html = document.documentElement;
+
+  const savedLang = localStorage.getItem('lang') || 'es';
+  html.setAttribute('lang', savedLang);
+  if (toggle) toggle.textContent = savedLang === 'es' ? 'EN' : 'ES';
+
+  toggle?.addEventListener('click', () => {
+    const currentLang = html.getAttribute('lang');
+    const newLang = currentLang === 'es' ? 'en' : 'es';
+    
+    html.setAttribute('lang', newLang);
+    localStorage.setItem('lang', newLang);
+    toggle.textContent = newLang === 'es' ? 'EN' : 'ES';
+    
+    window.dispatchEvent(new CustomEvent('lang-change', { detail: newLang }));
+  });
+
+  window.addEventListener('lang-change', (e: Event) => {
+    const lang = (e as CustomEvent).detail;
+    const event = new CustomEvent('i18n', { detail: lang });
+    window.dispatchEvent(event);
+  });
+</script>
