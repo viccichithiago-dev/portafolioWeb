@@ -1,0 +1,118 @@
+{
+  "es": {
+    "nav": {
+      "about": "Sobre mí",
+      "projects": "Proyectos",
+      "techstack": "Tech Stack",
+      "contact": "Contacto"
+    },
+    "hero": {
+      "role": "Backend Developer",
+      "title": "Hola, soy Thiago Viccichi",
+      "description": "Estudiante de Ingeniería en Informática de Buenos Aires. Construyo soluciones robustas con el ecosistema de Java y Spring Boot, siempre priorizando el código limpio y arquitecturas escalables.",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "curriculum": "Curriculum"
+    },
+    "about": {
+      "title": "Sobre mí",
+      "p1": "Muchos pueden escribir una función que funcione, pero pocos se desvelan pensando si esa función será una pesadilla para el equipo dentro de seis meses. Yo soy de los segundos.",
+      "p2": "Mi camino en la Ingeniería Informática se basa en la artesanía del software. He pasado de 'picar código' a diseñar soluciones bajo una premisa clara: el software debe ser escalable, testeable y eficiente.",
+      "cleanCode": "Código Limpio",
+      "cleanCodeDesc": "Aplico SOLID, DRY y patrones de diseño por defecto. Si no es legible, no está terminado.",
+      "testing": "Obsesión por el Testeo",
+      "testingDesc": "No cruzo los dedos; escribo tests con JUnit y Mockito. Si no se puede testear, está mal diseñado.",
+      "quote": "Mi objetivo es integrarme a un equipo que valore las buenas prácticas, donde pueda volcar mi mentalidad de diseño orientado a la calidad y crecer enfrentando desafíos técnicos complejos."
+    },
+    "projects": {
+      "title": "Proyectos",
+      "upcoming": "Próximamente",
+      "seeAll": "Ver todos en GitHub",
+      "project1": {
+        "name": "Sistema de Reservación de Películas",
+        "description": "Sistema integral de reservas de cine basado en microservicios. API REST con Spring Boot 3.5 que gestiona flujos complejos: cartelera dinámica, disponibilidad de asientos en tiempo real, autenticación RBAC (JWT) y estadísticas administrativas. Arquitectura limpia testeada con JUnit 5 y Mockito"
+      },
+      "project2": {
+        "name": "Cloud Image Service",
+        "description": "API REST robusta desarrollada con Spring Boot 3.5 y Java 21 para la gestión y procesamiento dinámico de imágenes. Incluye autenticación JWT, almacenamiento en AWS S3 (LocalStack) y transformaciones programáticas (Resize, Filter, Watermark). Arquitectura escalable y documentada con Swagger"
+      },
+      "project3": {
+        "name": "App de Microservicios",
+        "description": "Próximamente: Aplicación completa de microservicios desarrollada con las mejores prácticas de arquitectura distribuida"
+      }
+    },
+    "techstack": {
+      "title": "Tech Stack"
+    },
+    "contact": {
+      "title": "¿Conectamos?",
+      "description": "¿Tienes alguna pregunta o quieres conectar? No dudes en escribirme.",
+      "email": "Enviar email"
+    },
+    "footer": {
+      "name": "Thiago Viccichi",
+      "role": "Backend Developer especializado en Java y Spring Boot.",
+      "links": "Enlaces",
+      "connect": "Conectar",
+      "copyright": "© 2026 Thiago Viccichi"
+    }
+  },
+  "en": {
+    "nav": {
+      "about": "About",
+      "projects": "Projects",
+      "techstack": "Tech Stack",
+      "contact": "Contact"
+    },
+    "hero": {
+      "role": "Backend Developer",
+      "title": "Hi, I'm Thiago Viccichi",
+      "description": "Computer Engineering student from Buenos Aires. I build robust solutions with Java and Spring Boot ecosystem, always prioritizing clean code and scalable architectures.",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "curriculum": "Resume"
+    },
+    "about": {
+      "title": "About Me",
+      "p1": "Many can write a function that works, but few stay up at night wondering if that function will be a nightmare for the team in six months. I'm one of the latter.",
+      "p2": "My path in Computer Engineering is based on software craftsmanship. I've moved from 'coding' to designing solutions under a clear premise: software must be scalable, testable, and efficient.",
+      "cleanCode": "Clean Code",
+      "cleanCodeDesc": "I apply SOLID, DRY, and design patterns by default. If it's not readable, it's not finished.",
+      "testing": "Testing Obsession",
+      "testingDesc": "I don't cross my fingers; I write tests with JUnit and Mockito. If it can't be tested, it's poorly designed.",
+      "quote": "My goal is to join a team that values good practices, where I can contribute my quality-oriented design mindset and grow by facing complex technical challenges."
+    },
+    "projects": {
+      "title": "Projects",
+      "upcoming": "Coming Soon",
+      "seeAll": "View all on GitHub",
+      "project1": {
+        "name": "Movie Reservation System",
+        "description": "Comprehensive microservice-based movie theater reservation system. REST API with Spring Boot 3.5 managing complex flows: dynamic showtimes, real-time seat availability, RBAC authentication (JWT), and administrative statistics. Clean architecture tested with JUnit 5 and Mockito"
+      },
+      "project2": {
+        "name": "Cloud Image Service",
+        "description": "Robust REST API developed with Spring Boot 3.5 and Java 21 for dynamic image management and processing. Includes JWT authentication, AWS S3 storage (LocalStack), and programmatic transformations (Resize, Filter, Watermark). Scalable architecture documented with Swagger"
+      },
+      "project3": {
+        "name": "Microservices App",
+        "description": "Coming soon: Complete microservices application developed with best distributed architecture practices"
+      }
+    },
+    "techstack": {
+      "title": "Tech Stack"
+    },
+    "contact": {
+      "title": "Let's Connect?",
+      "description": "Do you have any questions or want to connect? Feel free to reach out.",
+      "email": "Send email"
+    },
+    "footer": {
+      "name": "Thiago Viccichi",
+      "role": "Backend Developer specialized in Java and Spring Boot.",
+      "links": "Links",
+      "connect": "Connect",
+      "copyright": "© 2026 Thiago Viccichi"
+    }
+  }
+}
